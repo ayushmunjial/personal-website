@@ -34,46 +34,50 @@ import {
 
 const skillsLayout = [
   [
-    { Icon: SiPython, color: "#3776AB" },
-    { Icon: SiJavascript, color: "#F7DF1E" },
-    { Icon: SiTypescript, color: "#3178C6" },
-    { Icon: SiOpenjdk, color: "#007396" },
-    { Icon: SiKotlin, color: "#0095D5" },
-    { Icon: SiC, color: "#00589C" },
-    { Icon: SiOcaml, color: "#EC6813" },
-    { Icon: SiMysql, color: "#4479A1" },
-    {}, {}, {}, {}
+    {}, {}, {},
+    { Icon: SiPython, color: "#3776AB", label: "Python" },
+    { Icon: SiJavascript, color: "#F7DF1E", label: "JavaScript" },
+    { Icon: SiTypescript, color: "#3178C6", label: "TypeScript" },
+    { Icon: SiOpenjdk, color: "#007396", label: "Java" },
+    { Icon: SiKotlin, color: "#0095D5", label: "Kotlin" },
+    { Icon: SiC, color: "#00589C", label: "C" },
+    { Icon: SiOcaml, color: "#EC6813", label: "OCaml" },
+    { Icon: SiMysql, color: "#4479A1", label: "MySQL" },
+    {}, {}
   ],
   [
-    { Icon: SiReact, color: "#61DAFB" },
-    { Icon: SiTailwindcss, color: "#06B6D4" },
-    { Icon: SiHtml5, color: "#E34F26" },
-    { Icon: SiCss3, color: "#1572B6" },
-    { Icon: SiFramer, color: "#0055FF" },
-    { Icon: SiVite, color: "#646CFF" },
-    { Icon: SiJetpackcompose, color: "#4285F4" },
-    { Icon: SiAmazon, color: "#FF9900" },
-    {}, {}, {}, {}
+    {}, {},
+    { Icon: SiReact, color: "#61DAFB", label: "React" },
+    { Icon: SiTailwindcss, color: "#06B6D4", label: "Tailwind CSS" },
+    { Icon: SiHtml5, color: "#E34F26", label: "HTML5" },
+    { Icon: SiCss3, color: "#1572B6", label: "CSS3" },
+    { Icon: SiFramer, color: "#0055FF", label: "Framer Motion" },
+    { Icon: SiVite, color: "#646CFF", label: "Vite" },
+    { Icon: SiJetpackcompose, color: "#4285F4", label: "Jetpack Compose" },
+    { Icon: SiAmazon, color: "#FF9900", label: "AWS" },
+    {}, {}
   ],
   [
-    { Icon: SiNodedotjs, color: "#339933" },
-    { Icon: SiExpress, color: "#000000" },
-    { Icon: SiMongodb, color: "#47A248" },
-    { Icon: SiDocker, color: "#2496ED" },
-    { Icon: SiGithub, color: "#181717" },
-    { Icon: SiGit, color: "#F05032" },
-    { Icon: SiAndroidstudio, color: "#3DDC84" },
-    { Icon: SiGooglecloud, color: "#4285F4" },
-    {}, {}, {}, {}
+    {}, {},
+    { Icon: SiNodedotjs, color: "#339933", label: "Node.js" },
+    { Icon: SiExpress, color: "#000000", label: "Express.js" },
+    { Icon: SiMongodb, color: "#47A248", label: "MongoDB" },
+    { Icon: SiDocker, color: "#2496ED", label: "Docker" },
+    { Icon: SiGithub, color: "#181717", label: "GitHub" },
+    { Icon: SiGit, color: "#F05032", label: "Git" },
+    { Icon: SiAndroidstudio, color: "#3DDC84", label: "Android Studio" },
+    { Icon: SiGooglecloud, color: "#4285F4", label: "Google Cloud" },
+    {}, {}, {}
   ],
   [
-    { Icon: SiIntellijidea, color: "#000000" },
-    { Icon: SiPycharm, color: "#000000" },
-    { Icon: SiEclipseide, color: "#2C2255" },
-    { Icon: SiGradle, color: "#02303A" },
-    { Icon: SiLinux, color: "#FCC624" },
-    { Icon: SiMacos, color: "#000000" },
-    {}, {}, {}, {}, {}, {}
+    {}, {}, {},
+    { Icon: SiIntellijidea, color: "#000000", label: "IntelliJ IDEA" },
+    { Icon: SiPycharm, color: "#000000", label: "PyCharm" },
+    { Icon: SiEclipseide, color: "#2C2255", label: "Eclipse" },
+    { Icon: SiGradle, color: "#02303A", label: "Gradle" },
+    { Icon: SiLinux, color: "#FCC624", label: "Linux" },
+    { Icon: SiMacos, color: "#000000", label: "macOS" },
+    {}, {}, {}
   ],
 ];
 
@@ -102,11 +106,11 @@ const Home = () => {
             Ayush Munjial
           </motion.h1>
           <p className="text-lg md:text-xl text-gray-700 font-serif text-justify">
-            I'm Ayush Munjial — a Computer Science and Mathematics graduate from Rutgers University, where I graduated Summa Cum Laude and was inducted into Phi Beta Kappa. My passion lies in building software that’s not just functional, but thoughtful — designed with clarity, collaboration, and long-term impact in mind. Whether I’m architecting a media player app from scratch, tutoring peers in data structures, or writing custom neural networks for face and digit classification, I strive to write code that’s clean, maintainable, and a pleasure to read. For me, technical depth matters — but so does communication, teamwork, and knowing when to keep things simple.
+            Hi, I’m Ayush Munjial — a Computer Science and Mathematics graduate from Rutgers University, where I graduated Summa Cum Laude and was inducted into Phi Beta Kappa. I’m passionate about building software that isn’t just functional, but thoughtful — systems designed with clarity, collaboration, and long-term impact in mind. Whether I’m architecting a media player app from scratch, tutoring peers in data structures, or building neural networks for face and digit classification, I focus on writing clean, maintainable code that’s a pleasure to work with.
             <br /><br />
-            I believe great software comes from sharp thinking and shared ownership. I thrive in environments where ideas are challenged with energy and executed with care. I'm not the loudest in the room, but I lead by listening, contribute by organizing, and grow by doing. My work ethic is rooted in being resourceful — learning fast, referencing well, and staying organized to solve problems that matter. At the end of the day, I care less about the buzzwords and more about how the work we do makes life better — for users, for teammates, and for the communities we build for.
+            I believe great software stems from sharp thinking and shared ownership. I thrive in environments where ideas are challenged respectfully and executed with care. I’m not the loudest in the room, but I lead by listening, contribute through structure, and grow by doing. My strengths lie in being resourceful — learning fast, referencing well, and staying organized to solve problems that matter. I care less about chasing buzzwords and more about building tools that make everyday life a little better — for users, for teammates, and for the communities we serve.
             <br /><br />
-            If you value thoughtful engineering, clear communication, and building things that make a real difference, I’d love to connect. Whether it’s to collaborate, exchange ideas, or share debugging stories, feel free to reach out!
+            If you value thoughtful engineering, clear communication, and building with purpose, I’d love to connect. Whether it’s to collaborate on a project, share ideas, or just swap debugging war stories, feel free to reach out — I’m always up for a good conversation. I’m especially interested in working with people who care deeply about their craft and enjoy the process as much as the outcome.
           </p>
         </div>
       </div>
@@ -118,12 +122,17 @@ const Home = () => {
             {row.map((item, i) => (
               <motion.div
                 key={i}
-                className="w-20 h-20 bg-white rounded-xl flex items-center justify-center shadow-lg cursor-pointer"
+                className="relative group w-20 h-20 bg-white rounded-xl flex items-center justify-center shadow-lg cursor-pointer"
                 whileHover={item?.Icon ? { scale: 1.15 } : {}}
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 {item?.Icon ? (
-                  <item.Icon className="text-3xl" style={{ color: item.color }} />
+                  <>
+                    <item.Icon className="text-3xl" style={{ color: item.color }} />
+                    <div className="absolute -top-10 px-3 py-1 text-xs text-black bg-white border border-gray-300 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200" style={{ fontFamily: 'mono, serif' }}>
+                      {item.label}
+                    </div>
+                  </>
                 ) : null}
               </motion.div>
             ))}

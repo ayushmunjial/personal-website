@@ -1,12 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
-import { Instagram, Github, Linkedin } from "lucide-react";
+import { FaGithub, FaInstagram, FaLinkedin, FaSpotify } from "react-icons/fa";
 
 const navItems = [
   { path: "/", label: "Home" },
   { path: "/projects", label: "Projects" },
   { path: "/resume", label: "Resume" },
-  { path: "/contact", label: "Contact" },
+  { path: "/experience", label: "Experience" },
   { path: "/extras", label: "Extras" },
 ];
 
@@ -48,21 +48,28 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Github className="w-5 h-5 text-white hover:text-gray-400" />
-            </a>
-            <a
-              href="https://www.instagram.com/your_username"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Instagram className="w-5 h-5 text-white hover:text-gray-400" />
+              <FaGithub className="w-5 h-5 text-white hover:text-gray-400" />
             </a>
             <a
               href="https://www.linkedin.com/in/ayush-munjial"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Linkedin className="w-5 h-5 text-white hover:text-gray-400" />
+              <FaLinkedin className="w-5 h-5 text-white hover:text-gray-400" />
+            </a>
+            <a
+              href="https://www.instagram.com/ayush.munjial"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram className="w-5 h-5 text-white hover:text-gray-400" />
+            </a>
+            <a
+              href="https://open.spotify.com/user/rcyc18phb0jop0ahoanw3u3ep?si=kVtgJ3frQAePLbma5RsD6g"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaSpotify className="w-5 h-5 text-white hover:text-green-500" />
             </a>
           </div>
         </div>
@@ -100,21 +107,28 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Github className="w-5 h-5 text-white hover:text-gray-400" />
+              <FaGithub className="w-5 h-5 text-white hover:text-gray-400" />
             </a>
             <a
               href="https://www.instagram.com/ayush.munjial"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Instagram className="w-5 h-5 text-white hover:text-gray-400" />
+              <FaInstagram className="w-5 h-5 text-white hover:text-gray-400" />
             </a>
             <a
               href="https://www.linkedin.com/in/ayush-munjial"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Linkedin className="w-5 h-5 text-white hover:text-gray-400" />
+              <FaLinkedin className="w-5 h-5 text-white hover:text-gray-400" />
+            </a>
+            <a
+              href="https://open.spotify.com/user/rcyc18phb0jop0ahoanw3u3ep?si=kVtgJ3frQAePLbma5RsD6g"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin className="w-5 h-5 text-white hover:text-gray-400" />
             </a>
           </div>
         </div>

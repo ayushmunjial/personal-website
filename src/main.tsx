@@ -7,7 +7,7 @@ import App from "./App";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Resume from "./pages/Resume";
-import Contact from "./pages/Contact";
+import Experience from "./pages/Experience";
 import Extras from "./pages/Extras";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
@@ -18,7 +18,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Route index element={<Home />} />
           <Route path="projects" element={<Projects />} />
           <Route path="resume" element={<Resume />} />
-          <Route path="contact" element={<Contact />} />
+          <Route path="experience" element={<Experience />} />
           <Route path="extras" element={<Extras />} />
         </Route>
       </Routes>
