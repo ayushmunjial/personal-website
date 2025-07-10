@@ -1,35 +1,9 @@
 import { motion } from "framer-motion";
 import {
-  SiReact,
-  SiTailwindcss,
-  SiNodedotjs,
-  SiExpress,
-  SiMongodb,
-  SiGithub,
-  SiDocker,
-  SiVite,
-  SiFramer,
-  SiOpenjdk,
-  SiKotlin,
-  SiPython,
-  SiC,
-  SiOcaml,
-  SiJavascript,
-  SiTypescript,
-  SiMysql,
-  SiHtml5,
-  SiCss3,
-  SiJetpackcompose,
-  SiAndroidstudio,
-  SiGit,
-  SiEclipseide,
-  SiIntellijidea,
-  SiPycharm,
-  SiGradle,
-  SiAmazon,
-  SiGooglecloud,
-  SiLinux,
-  SiMacos,
+  SiPython, SiJavascript, SiTypescript, SiOpenjdk, SiKotlin, SiC, SiOcaml, SiMysql,
+  SiReact, SiTailwindcss, SiHtml5, SiCss3, SiFramer, SiVite, SiJetpackcompose, SiAmazon,
+  SiNodedotjs, SiExpress, SiMongodb, SiDocker, SiGithub, SiGit, SiAndroidstudio, 
+  SiGooglecloud,  SiIntellijidea, SiPycharm,  SiEclipseide, SiGradle,  SiLinux, SiMacos,
 } from "react-icons/si";
 
 const skillsLayout = [
@@ -38,7 +12,7 @@ const skillsLayout = [
     { Icon: SiPython, color: "#3776AB", label: "Python" },
     { Icon: SiJavascript, color: "#F7DF1E", label: "JavaScript" },
     { Icon: SiTypescript, color: "#3178C6", label: "TypeScript" },
-    { Icon: SiOpenjdk, color: "#007396", label: "Java" },
+    { Icon: SiOpenjdk, color: "#007396",  label: "Java" },
     { Icon: SiKotlin, color: "#0095D5", label: "Kotlin" },
     { Icon: SiC, color: "#00589C", label: "C" },
     { Icon: SiOcaml, color: "#EC6813", label: "OCaml" },
@@ -50,16 +24,16 @@ const skillsLayout = [
     { Icon: SiReact, color: "#61DAFB", label: "React" },
     { Icon: SiTailwindcss, color: "#06B6D4", label: "Tailwind CSS" },
     { Icon: SiHtml5, color: "#E34F26", label: "HTML5" },
-    { Icon: SiCss3, color: "#1572B6", label: "CSS3" },
+    { Icon: SiCss3, color: "#1572B6",  label: "CSS3"  },
     { Icon: SiFramer, color: "#0055FF", label: "Framer Motion" },
-    { Icon: SiVite, color: "#646CFF", label: "Vite" },
+    { Icon: SiVite, color: "#646CFF",  label: "Vite" },
     { Icon: SiJetpackcompose, color: "#4285F4", label: "Jetpack Compose" },
     { Icon: SiAmazon, color: "#FF9900", label: "AWS" },
     {}, {}
   ],
   [
     {}, {},
-    { Icon: SiNodedotjs, color: "#339933", label: "Node.js" },
+    { Icon: SiNodedotjs, color: "#339933",  label: "Node.js" },
     { Icon: SiExpress, color: "#000000", label: "Express.js" },
     { Icon: SiMongodb, color: "#47A248", label: "MongoDB" },
     { Icon: SiDocker, color: "#2496ED", label: "Docker" },
@@ -87,7 +61,7 @@ const Home = () => {
       id="home"
       className="relative min-h-screen bg-gray-200 rounded-2xl flex flex-col items-start justify-center px-6 py-12 gap-12 overflow-hidden"
     >
-      {/* Transparent Texture Overlay */}
+      {/* Texture Overlay */}
       <div
         className="absolute inset-0 bg-center bg-cover opacity-10 pointer-events-none rounded-2xl"
         style={{ backgroundImage: "url('/pattern.svg')" }}

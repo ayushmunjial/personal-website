@@ -36,7 +36,7 @@ const Experience = () => {
       id="experience"
       className="relative w-full bg-gray-200 rounded-2xl px-6 md:px-12 pt-10 pb-16 overflow-hidden"
     >
-      {/* Texture Background */}
+      {/* Texture Overlay */}
       <div
         className="absolute inset-0 bg-center bg-cover opacity-10 pointer-events-none rounded-2xl"
         style={{ backgroundImage: "url('/pattern.svg')" }}

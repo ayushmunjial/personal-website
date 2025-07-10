@@ -20,14 +20,7 @@ const projects = [
     title: "Online Booking System",
     github: "https://github.com/ayushmunjial/online-booking-system",
     tech: [
-      "Java",
-      "JSP",
-      "JDBC",
-      "MySQL",
-      "Tomcat",
-      "HTML/CSS",
-      "JavaScript",
-      "Eclipse",
+      "Java", "JSP", "JDBC", "MySQL", "Tomcat", "HTML/CSS", "JavaScript", "Eclipse",
     ],
     description:
       "Designed an online railway booking system using JSP and MySQL. Enabled real-time scheduling, ticketing, and cancellations across 100+ routes. Integrated fare calculation, station search, and deployment on a Tomcat server.",
