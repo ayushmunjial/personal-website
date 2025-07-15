@@ -98,20 +98,23 @@ const Home = () => {
         </div>
 
         {/* Keyboard-style Skills Grid */}
-        <div className="w-full bg-gray-100 rounded-2xl p-6 mt-12 shadow-inner">
+        <div className="w-full bg-gray-100 rounded-2xl p-4 mt-12 shadow-inner">
           {skillsLayout.map((row, rowIndex) => (
-            <div key={rowIndex} className="flex justify-center gap-6 mb-6">
+            <div
+              key={rowIndex}
+              className="flex gap-4 mb-6 px-2 overflow-x-auto sm:justify-center sm:overflow-visible"
+            >
               {row.map((item, i) => (
                 <motion.div
                   key={i}
-                  className="relative group w-20 h-20 bg-white rounded-xl flex items-center justify-center shadow-lg cursor-pointer"
+                  className="relative group w-16 h-16 sm:w-20 sm:h-20 bg-white rounded-xl flex items-center justify-center shadow-lg cursor-pointer shrink-0"
                   whileHover={item?.Icon ? { scale: 1.15 } : {}}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   {item?.Icon ? (
                     <>
-                      <item.Icon className="text-3xl" style={{ color: item.color }} />
-                      <div className="absolute -top-10 px-3 py-1 text-xs text-black bg-white border border-gray-300 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200" style={{ fontFamily: 'mono, serif' }}>
+                      <item.Icon className="text-2xl sm:text-3xl" style={{ color: item.color }} />
+                      <div className="absolute -top-10 px-3 py-1 text-xs text-black bg-white border border-gray-300 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 font-mono">
                         {item.label}
                       </div>
                     </>
