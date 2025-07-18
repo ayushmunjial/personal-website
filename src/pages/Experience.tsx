@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import PageWrapper from "../components/PageWrapper"; import { motion } from "framer-motion";
 
 const experiences = [
   {
@@ -32,55 +32,57 @@ I worked closely with the warehouse and billing teams to verify product inflow/o
 
 const Experience = () => {
   return (
-    <section
-      id="experience"
-      className="relative w-full bg-gray-200 rounded-2xl px-6 md:px-12 pt-10 pb-16 overflow-hidden"
-    >
-      {/* Texture Overlay */}
-      <div
-        className="absolute inset-0 bg-center bg-cover opacity-10 pointer-events-none rounded-2xl"
-        style={{ backgroundImage: "url('/pattern.svg')" }}
-      ></div>
+    <PageWrapper>
+      <section
+        id="experience"
+        className="relative w-full bg-gray-200 rounded-2xl px-6 md:px-12 pt-10 pb-16 overflow-hidden"
+      >
+        {/* Texture Overlay */}
+        <div
+          className="absolute inset-0 bg-center bg-cover opacity-10 pointer-events-none rounded-2xl"
+          style={{ backgroundImage: "url('/pattern.svg')" }}
+        ></div>
 
-      <div className="relative z-10 space-y-12">
-        <motion.h2
-          className="text-4xl md:text-5xl font-extrabold text-gray-900 font-mono"
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          Work Experience
-        </motion.h2>
+        <div className="relative z-10 space-y-12">
+          <motion.h2
+            className="text-4xl md:text-5xl font-extrabold text-gray-900 font-mono"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            Work Experience
+          </motion.h2>
 
-        <div className="space-y-10">
-          {experiences.map((exp, idx) => (
-            <motion.div
-              key={idx}
-              className="bg-gray-100 p-6 rounded-2xl shadow-lg border border-gray-300"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-            >
-              <h3 className="text-2xl font-semibold font-mono text-gray-900">
-                {exp.role} –{" "}
-                <span className="text-blue-700">{exp.company}</span>
-              </h3>
-              <p className="text-sm text-gray-600 italic">
-                {exp.location} | {exp.period}
-              </p>
-              <p
-                className="mt-3 whitespace-pre-line text-gray-800 text-[15px] text-justify"
-                style={{ fontFamily: `"Times New Roman", serif` }}
+          <div className="space-y-10">
+            {experiences.map((exp, idx) => (
+              <motion.div
+                key={idx}
+                className="bg-gray-100 p-6 rounded-2xl shadow-lg border border-gray-300"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
               >
-                {exp.description}
-              </p>
-            </motion.div>
-          ))}
+                <h3 className="text-2xl font-semibold font-mono text-gray-900">
+                  {exp.role} –{" "}
+                  <span className="text-blue-700">{exp.company}</span>
+                </h3>
+                <p className="text-sm text-gray-600 italic">
+                  {exp.location} | {exp.period}
+                </p>
+                <p
+                  className="mt-3 whitespace-pre-line text-gray-800 text-[15px] text-justify"
+                  style={{ fontFamily: `"Times New Roman", serif` }}
+                >
+                  {exp.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </PageWrapper>
   );
 };
 
