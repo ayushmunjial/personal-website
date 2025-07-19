@@ -14,7 +14,6 @@ const terminalData: Record<string, string> = {
   inspiration: "Developers who ship thoughtful products and don’t chase hype",
   available: "Always open to learn, collaborate, and build something cool",
   workflow: "I live by the Pomodoro Technique + Notion Calendar",
-
   frontend: "React, TypeScript, Tailwind CSS, Framer Motion, Vite, HTML, CSS",
   backend: "Node.js, Express.js, REST APIs, MySQL, MongoDB, SQL",
   fullstack: "JavaScript, Java (JSP + JDBC), Docker, GitHub Actions, AWS, GCP",
@@ -23,31 +22,18 @@ const terminalData: Record<string, string> = {
   languages: "Java, Kotlin, Python, C, OCaml, JavaScript, TypeScript, SQL",
   tools: "Git, GitHub, Docker, IntelliJ, PyCharm, Eclipse, Gradle, Tomcat",
   platforms: "Android Studio, AWS, GCP, Linux, macOS",
-
-  help: `→ General:             → Technical:
-  whoami               frontend
-  personality          backend
-  aboutme              fullstack
-  contact              android
-  funfact              languages
-  interests            tools
-  motto                platforms
-  workflow
-  currently
-  dream-job
-  available
-  inspiration
-`,
 };
 
 const Extras = () => {
-  const [command, setCommand] = useState(""); const [history, setHistory] = useState<string[]>([]);
+  const [command, setCommand] = useState(""); const [history, setHistory] = useState<string[]>(["> help", "__custom_help__"]);
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       const trimmed = command.trim().toLowerCase();
       if (trimmed === "clear") {
         setHistory([]);
+      } else if (trimmed === "help") {
+        setHistory((prev) => [...prev, `> help`, "__custom_help__"]);
       } else {
         const response = terminalData[trimmed] || `Command not found: ${trimmed}`;
         setHistory((prev) => [...prev, `> ${trimmed}`, response]);
@@ -69,7 +55,7 @@ const Extras = () => {
         ></div>
 
         <div className="relative z-10 flex flex-col md:flex-row gap-8">
-          {/* Left Content - 40% */}
+          {/* Left Content - 60% */}
           <div className="w-full md:w-3/5 space-y-10">
             <motion.h2
               className="text-4xl md:text-5xl font-extrabold text-gray-900 font-mono"
@@ -158,14 +144,13 @@ const Extras = () => {
             </motion.div>
           </div>
 
-          {/* Right Terminal - 60% */}
+          {/* Right Terminal - 40% */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, type: "spring", stiffness: 70 }}
             className="w-full md:w-2/5 h-full bg-white text-gray-800 rounded-2xl shadow-xl border border-gray-300 p-6 flex flex-col font-mono relative overflow-hidden"
           >
-            {/* Gradient background for subtle depth */}
             <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-white opacity-70 pointer-events-none rounded-2xl z-0" />
 
             <div className="relative z-10">
@@ -175,15 +160,50 @@ const Extras = () => {
 
             <div className="flex-1 overflow-y-auto mb-4 space-y-2 text-[14px] relative z-10">
               {history.map((line, i) => (
-                <motion.pre
-                  key={i}
-                  className="whitespace-pre-wrap text-blue-900"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: i * 0.02 }}
-                >
-                  {line}
-                </motion.pre>
+                <div key={i}>
+                  {line === "__custom_help__" ? (
+                    <div className="text-sm md:text-base flex flex-col md:flex-row gap-8 whitespace-pre-wrap text-blue-900">
+                      <div>
+                        <div className="font-semibold">→ General:</div>
+                        <div className="whitespace-pre">
+                          whoami{'\n'}
+                          personality{'\n'}
+                          aboutme{'\n'}
+                          contact{'\n'}
+                          funfact{'\n'}
+                          interests{'\n'}
+                          motto{'\n'}
+                          workflow{'\n'}
+                          currently{'\n'}
+                          dream-job{'\n'}
+                          available{'\n'}
+                          inspiration
+                        </div>
+                      </div>
+                      <div>
+                        <div className="font-semibold">→ Technical:</div>
+                        <div className="whitespace-pre">
+                          frontend{'\n'}
+                          backend{'\n'}
+                          fullstack{'\n'}
+                          android{'\n'}
+                          languages{'\n'}
+                          tools{'\n'}
+                          platforms
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <motion.pre
+                      className="whitespace-pre-wrap text-blue-900"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, delay: i * 0.02 }}
+                    >
+                      {line}
+                    </motion.pre>
+                  )}
+                </div>
               ))}
             </div>
 
