@@ -1,4 +1,5 @@
 import PageWrapper from "../components/PageWrapper"; import { motion } from "framer-motion";
+
 import {
   SiPython, SiJavascript, SiTypescript, SiOpenjdk, SiKotlin, SiC, SiOcaml, SiMysql,
   SiReact, SiTailwindcss, SiHtml5, SiCss3, SiFramer, SiVite, SiJetpackcompose, SiAmazon,
@@ -127,6 +128,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <p className="text-left text-gray-600 text-sm"> © 2025 Ayush Munjial </p>
     </PageWrapper>
   );
 };

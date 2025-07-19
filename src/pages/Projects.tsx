@@ -120,6 +120,7 @@ const Projects = () => {
           ))}
         </div>
       </section>
+      <p className="text-left text-gray-600 text-sm"> © 2025 Ayush Munjial </p>
     </PageWrapper>
   );
 };

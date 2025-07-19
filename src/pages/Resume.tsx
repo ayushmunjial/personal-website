@@ -18,6 +18,7 @@ const Resume = () => {
           src="/resume.pdf" className="w-full max-w-[90rem] h-full rounded-2xl shadow-xl relative z-10" title="Resume Preview"
         />
       </section>
+      <p className="text-left text-gray-600 text-sm"> © 2025 Ayush Munjial </p>
     </PageWrapper>
   );
 };

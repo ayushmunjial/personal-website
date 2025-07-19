@@ -154,7 +154,9 @@ const Extras = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-white opacity-70 pointer-events-none rounded-2xl z-0" />
 
             <div className="relative z-10">
-              <h2 className="text-xl font-bold mb-2 text-gray-900">Terminal — hi, get to know me</h2>
+              <h2 className="text-xl font-bold mb-2 text-gray-900 truncate max-w-full">
+                Terminal — hi, get to know me
+              </h2>
               <hr className="border-t border-gray-300 mb-4" />
             </div>
 
@@ -166,36 +168,36 @@ const Extras = () => {
                       <div>
                         <div className="font-semibold">→ General:</div>
                         <div className="whitespace-pre">
-                          whoami{'\n'}
-                          personality{'\n'}
-                          aboutme{'\n'}
-                          contact{'\n'}
-                          funfact{'\n'}
-                          interests{'\n'}
-                          motto{'\n'}
-                          workflow{'\n'}
-                          currently{'\n'}
-                          dream-job{'\n'}
-                          available{'\n'}
+                          whoami{'\n '}
+                          personality{'\n '}
+                          aboutme{'\n '}
+                          contact{'\n '}
+                          funfact{'\n '}
+                          interests{'\n '}
+                          motto{'\n '}
+                          workflow{'\n '}
+                          currently{'\n '}
+                          dream-job{'\n '}
+                          available{'\n '}
                           inspiration
                         </div>
                       </div>
                       <div>
                         <div className="font-semibold">→ Technical:</div>
                         <div className="whitespace-pre">
-                          frontend{'\n'}
-                          backend{'\n'}
-                          fullstack{'\n'}
-                          android{'\n'}
-                          languages{'\n'}
-                          tools{'\n'}
+                          frontend{'\n '}
+                          backend{'\n '}
+                          fullstack{'\n '}
+                          android{'\n '}
+                          languages{'\n '}
+                          tools{'\n '}
                           platforms
                         </div>
                       </div>
                     </div>
                   ) : (
                     <motion.pre
-                      className="whitespace-pre-wrap text-blue-900"
+                      className="whitespace-pre-wrap text-blue-900 truncate max-w-full"
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.3, delay: i * 0.02 }}
@@ -214,14 +216,15 @@ const Extras = () => {
                 value={command}
                 onChange={(e) => setCommand(e.target.value)}
                 onKeyDown={handleKeyDown}
-                className="flex-1 bg-transparent outline-none text-gray-700 placeholder:text-gray-400"
-                placeholder="Type a command (e.g. whoami, help, clear)..."
+                className="bg-transparent outline-none text-gray-700 placeholder:text-gray-400 truncate w-full max-w-full"
+                placeholder="Try: whoami, help, clear"
                 whileFocus={{ scale: 1.01 }}
               />
             </div>
           </motion.div>
         </div>
       </section>
+      <p className="text-left text-gray-600 text-sm"> © 2025 Ayush Munjial </p>
     </PageWrapper>
   );
 };
