@@ -3,8 +3,8 @@ import { useState } from "react";
 
 const terminalData: Record<string, string> = {
   whoami: "Ayush Munjial, Rutgers CS + Math, class of 2025",
-  aboutme: "Location: Santa Clara, CA 95051\nGPA: 3.853 / 4.0 — Dean’s List throughout college",
-  contact: "ayush.munjial@rutgers.edu, +1 (908) 449-9850",
+  aboutme: "Location: Santa Clara, CA 95051\nGPA: 3.853 / 4.0 — Dean’s List",
+  contact: "ayush.munjial@rutgers.edu, Tel: +1(908)449-9850",
   funfact: "I speak 3 languages: Hindi, English, and Spanish!",
   interests: "Soccer, F1, cricket, gym, FIFA, photography",
   motto: "Make things that matter and make them beautiful",
@@ -48,7 +48,7 @@ const Extras = () => {
         id="extras"
         className="relative w-full bg-gray-200 rounded-2xl px-6 md:px-12 pt-10 pb-16 overflow-hidden"
       >
-        {/* Texture */}
+        {/* Texture Overlay */}
         <div
           className="absolute inset-0 bg-center bg-cover opacity-10 pointer-events-none rounded-2xl"
           style={{ backgroundImage: "url('/pattern.svg')" }}

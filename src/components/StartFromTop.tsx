@@ -6,8 +6,7 @@ const StartFromTop = () => {
 
   useEffect(() => {
     window.scrollTo({
-      top: 0,
-      behavior: "instant",
+      top: 0, behavior:    "instant",
     });
   }, [pathname]);
 

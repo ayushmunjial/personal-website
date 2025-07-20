@@ -11,8 +11,7 @@ const navItems = [
 ];
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const { pathname } = useLocation();
+  const [isOpen, setIsOpen] = useState(false); const { pathname } = useLocation();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-700 font-mono shadow h-16">
